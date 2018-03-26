@@ -1,189 +1,304 @@
-# Laravel-sheet
-Laravel Quick Review
-Artisan 
-// Displays help for a given command
+# VenkatSkpi
+[Laravel API Document](https://laravel.com/api/5.5/)
+[Laravel Document](https://laravel.com/docs/5.6/)
+
+### Artisan 
+- Displays help for a given command
+```sh
 php artisan --help OR -h
-// Do not output any message
+```
+  - Do not output any message
+```sh
 php artisan --quiet OR -q
-// Display this application version
+```
+  - Display this application version
+```sh
 php artisan --version OR -V
-// Do not ask any interactive question
+```
+  - Do not ask any interactive question
+```sh
 php artisan --no-interaction OR -n
-// Force ANSI output
+```
+  - Force ANSI output
+```sh
 php artisan --ansi
-// Disable ANSI output
+```
+  - Disable ANSI output
+```sh
 php artisan --no-ansi
-// The environment the command should run under
+```
+  - The environment the command should run under
+```sh
 php artisan --env
-// -v|vv|vvv Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+```
+  - -v|vv|vvv Increase the verbosity of messages: 1 for normal output, 2 for more verbose output and 3 for debug
+```sh
 php artisan --verbose
+```
 
-// Display the framework change list
+  - Display the framework change list
+```sh
 php artisan changes
-// Remove the compiled class file
+```
+  - Remove the compiled class file
+```sh
 php artisan clear-compiled
-// Put the application into maintenance mode
+```
+  - Put the application into maintenance mode
+```sh
 php artisan down
-// Regenerate framework autoload files
+```
+  - Regenerate framework autoload files
+```sh
 php artisan dump-autoload
-// Display the current framework environment
+```
+  - Display the current framework environment
+```sh
 php artisan env
-// Displays help for a command
+```
+  - Displays help for a command
+```sh
 php artisan help
-// Lists commands
+```
+  - Lists commands
+```sh
 php artisan list
-// Optimize the framework for better performance
+```
+  - Optimize the framework for better performance
+```sh
 php artisan optimize
-// List all registered routes
+```
+  - List all registered routes
+```sh
 php artisan routes
-// Serve the application on the PHP development server
+```
+  - Serve the application on the PHP development server
+```sh
 php artisan serve
-// Change the default port
+```
+  - Change the default port
+```sh
 php artisan serve --port 8080
-// Get it to work outside localhost
+```
+  - Get it to work outside localhost
+```sh
 php artisan serve --host 0.0.0.0
-// Interact with your application
+```
+  - Interact with your application
+```sh
 php artisan tinker
-// Bring the application out of maintenance mode
+```
+  - Bring the application out of maintenance mode
+```sh
 php artisan up
-// Create a new package workbench
+```
+  - Create a new package workbench
+```sh
 php artisan workbench
-// Publish a package's assets to the public directory
+```
+  - Publish a package's assets to the public directory
+```sh
 php artisan asset:publish [--bench[="vendor/package"]] [--path[="..."]] [package]
-// Create a migration for the password reminders table
+```
+  - Create a migration for the password reminders table
+```sh
 php artisan auth:reminders-table
-// Flush the application cache
+```
+  - Flush the application cache
+```sh
 php artisan cache:clear
-// Create a new Artisan command (L3:task)
+```
+  - Create a new Artisan command (L3:task)
+```sh
 php artisan command:make name [--command[="..."]] [--path[="..."]] [--namespace[="..."]]
-// Publish a package's configuration to the application
+```
+  - Publish a package's configuration to the application
+```sh
 php artisan config:publish
-// Create a new resourceful controller
+```
+  - Create a new resourceful controller
+```sh
 php artisan controller:make [--bench="vendor/package"]
-// Seed the database with records
+```
+  - Seed the database with records
+```sh
 php artisan db:seed [--class[="..."]] [--database[="..."]]
-// Set the application key
+```
+  - Set the application key
+```sh
 php artisan key:generate
+```
 
-// Database migrations
+  - Database migrations
+```sh
 php artisan migrate [--bench="vendor/package"] [--database[="..."]] [--path[="..."]] [--package[="..."]] [--pretend] [--seed]
-// Create the migration repository
+```
+  - Create the migration repository
+```sh
 php artisan migrate:install [--database[="..."]]
-// Create a new migration file
+```
+  - Create a new migration file
+```sh
 php artisan migrate:make name [--bench="vendor/package"] [--create] [--package[="..."]] [--path[="..."]] [--table[="..."]]
-// Reset and re-run all migrations
+```
+  - Reset and re-run all migrations
+```sh
 php artisan migrate:refresh [--database[="..."]] [--seed]
-// Rollback all database migrations
+```
+  - Rollback all database migrations
+```sh
 php artisan migrate:reset [--database[="..."]] [--pretend]
-// Rollback the last database migration
+```
+  - Rollback the last database migration
+```sh
 php artisan migrate:rollback [--database[="..."]] [--pretend]
-// Publish a package's migrations to migration directory
+```
+  - Publish a package's migrations to migration directory
+```sh
 php artisan migrate:publish vendor/package
+```
 
-// Listen to a given queue
+  - Listen to a given queue
+```sh
 php artisan queue:listen [--queue[="..."]] [--delay[="..."]] [--memory[="..."]] [--timeout[="..."]] [connection]
-// Subscribe a URL to an Iron.io push queue
+```
+  - Subscribe a URL to an Iron.io push queue
+```sh
 php artisan queue:subscribe [--type[="..."]] queue url
-// Process the next job on a queue
+```
+  - Process the next job on a queue
+```sh
 php artisan queue:work [--queue[="..."]] [--delay[="..."]] [--memory[="..."]] [--sleep] [connection]
-// Create a migration for the session database table
+```
+  - Create a migration for the session database table
+```sh
 php artisan session:table
-// Publish a package's views to the application
+```
+  - Publish a package's views to the application
+```sh
 php artisan view:publish [--path[="..."]] package
 php artisan tail [--path[="..."]] [--lines[="..."]] [connection]
+```
                 
-Composer 
+### Composer 
+
+```sh
 composer create-project laravel/laravel folder_name
 composer install
 composer update
 composer dump-autoload [--optimize]
 composer self-update
-                
-Configuration 
+```
+
+### Configuration 
+```sh
 Config::get('app.timezone');
-//get with Default value
- Config::get('app.timezone', 'UTC');
-//set Configuration
- Config::set('database.default', 'sqlite');
+```  
+  - get with Default value
+    > Config::get('app.timezone', 'UTC');
+ - set Configuration
+   > Config::set('database.default', 'sqlite');
                 
-Routing 
+### Routing 
+```sh
 Route::get('foo', function(){});
 Route::get('foo', 'ControllerName@function');
 Route::controller('foo', 'FooController');
-                
-RESTful Controllers
+```
+### RESTful Controllers
+```sh
 Route::resource('posts','PostsController');
-//Specify a subset of actions to handle on the route
+ * Specify a subset of actions to handle on the route
  Route::resource('photo', 'PhotoController',['only' => ['index', 'show']]);
 Route::resource('photo', 'PhotoController',['except' => ['update', 'destroy']]);
-                
-Triggering Errors
+```    
+### Triggering Errors
+```sh
 App::abort(404);
 App::missing(function($exception){});
 throw new NotFoundHttpException;
-                
-Route Parameters
+```       
+### Route Parameters
+```sh
 Route::get('foo/{bar}', function($bar){});
 Route::get('foo/{bar?}', function($bar = 'bar'){});
-                
-HTTP Verbs
+```      
+### HTTP Verbs
+```sh
 Route::any('foo', function(){});
 Route::post('foo', function(){});
 Route::put('foo', function(){});
 Route::patch('foo', function(){});
 Route::delete('foo', function(){});
-// RESTful actions
- Route::resource('foo', 'FooController');
+```
+### RESTful actions
+ 
+ > Route::resource('foo', 'FooController');
                 
-Secure Routes
+### Secure Routes
+```sh
 Route::get('foo', array('https', function(){}));
 Route Constraints
 Route::get('foo/{bar}', function($bar){})
   ->where('bar', '[0-9]+');
 Route::get('foo/{bar}/{baz}', function($bar, $baz){})
   ->where(array('bar' => '[0-9]+', 'baz' => '[A-Za-z]'))
+```
+
+#### Set a pattern to be used across routes
+>  Route::pattern('bar', '[0-9]+')
                 
-// Set a pattern to be used across routes
- Route::pattern('bar', '[0-9]+')
-                
-Filters
-// Declare an auth filter
+### Filters
+ - Declare an auth filter
+ ```sh
  Route::filter('auth', function(){});
-// Register a class as a filter
+ ```
+ - Register a class as a filter
+ ```sh
  Route::filter('foo', 'FooFilter');
 Route::get('foo', array('before' => 'auth', function(){}));
-// Routes in this group are guarded by the 'auth' filter
+```
+ - Routes in this group are guarded by the 'auth' filter
+ ```sh
  Route::get('foo', array('before' => 'auth', function(){}));
 Route::group(array('before' => 'auth'), function(){});
-// Pattern filter
+```
+ - Pattern filter
+ ```sh
  Route::when('foo/*', 'foo');
-// HTTP verb pattern
+ ```
+ - HTTP verb pattern
+ ```sh
  Route::when('foo/*', 'foo', array('post'));
+ ```
                 
-Named Routes
+### Named Routes
+```sh
 Route::currentRouteName();
 Route::get('foo/bar', array('as' => 'foobar', function(){}));
-                
-Route Prefixing
-// This route group will carry the prefix 'foo'
+```             
+### Route Prefixing
+> This route group will carry the prefix 'foo'
  Route::group(array('prefix' => 'foo'), function(){})
                 
-Route Namespacing
-// This route group will carry the namespace 'Foo\Bar'
+### Route Namespacing
+> This route group will carry the namespace 'Foo\Bar'
  Route::group(array('namespace' => 'Foo\Bar'), function(){})
                 
-Sub-Domain Routing
-// {sub} will be passed to the closure
+### Sub-Domain Routing
+> {sub} will be passed to the closure
  Route::group(array('domain' => '{sub}.example.com'), function(){});
                 
-App 
-App::environment();
+### App 
+
+> App::environment();
 // test equal to
  App::environment('local');
 App::runningInConsole();
 App::runningUnitTests();
                 
-Log 
+###  Log
+```sh
 Log::info('info');
 Log::info('info',array('context'=>'additional info'));
 Log::error('error');
@@ -194,8 +309,11 @@ Log::warning('warning');
  Log::listen(function($level, $message, $context) {});
 // get all ran queries.
 DB::getQueryLog();
-                
-URLs 
+```
+
+### URLs
+
+```sh
 URL::full();
 URL::current();
 URL::previous();
@@ -210,8 +328,10 @@ URL::getRequest();
 URL::setRequest($request);
 URL::getGenerator();
 URL::setGenerator($generator);
-                
-Events 
+```             
+
+### Events 
+```sh
 Event::fire('foo.bar', array($bar));
 Event::listen('foo.bar', function($bar){});
 Event::listen('foo.*', function($bar){});
@@ -223,18 +343,23 @@ Event::flusher('foo', function($bar){});
 Event::flush('foo');
 Event::forget('foo');
 Event::subscribe(new FooEventHandler);
-                
-Database 
+```
+
+### Database 
+```sh
 DB::connection('connection_name');
 DB::statement('drop table users');
 DB::listen(function($sql, $bindings, $time){ code_here; });
 DB::transaction(function(){ transaction_code_here; });
-// Cache a query for $time minutes
+   * Cache a query for $time minutes
 DB::table('users')->remember($time)->get();
-// Escape raw input
+   * Escape raw input
 DB::raw('sql expression here');
-                
-Selects
+ ```
+ 
+## Selects
+
+```sh
 DB::table('name')->get();
 DB::table('name')->distinct()->get();
 DB::table('name')->select('column as column_alias')->get();
@@ -274,8 +399,10 @@ DB::table('name')->delete();
 // Delete specific records
 DB::table('name')->where('id', '>', '10')->delete();
 DB::table('name')->truncate();
-                
-Aggregates
+```
+
+### Aggregates
+```sh
 DB::table('name')->count();
 DB::table('name')->max('column');
 DB::table('name')->min('column');
@@ -289,73 +416,77 @@ DB::table('name')->remember(5)->get();
 DB::table('name')->remember(5, 'cache-key-name')->get();
 DB::table('name')->cacheTags('my-key')->remember(5)->get();
 DB::table('name')->cacheTags(array('my-first-key','my-second-key'))->remember(5)->get();
+```
+
+## Raw Expressions
+> return rows
+- DB::select('select * from users where id = ?', array('value'));
+> return nr affected rows
+- DB::insert('insert into foo set bar=2');
+- DB::update('update foo set bar=2');
+- DB::delete('delete from bar');
+> returns void
+- DB::statement('update foo set bar=2');
+> raw expression inside a statement
+- DB::table('name')->select(DB::raw('count(*) as count, column2'))->get();
                 
-Raw Expressions
-// return rows
-DB::select('select * from users where id = ?', array('value'));
-// return nr affected rows
-DB::insert('insert into foo set bar=2');
-DB::update('update foo set bar=2');
-DB::delete('delete from bar');
-// returns void
-DB::statement('update foo set bar=2');
-// raw expression inside a statement
-DB::table('name')->select(DB::raw('count(*) as count, column2'))->get();
-                
-Eloquent 
-Model::create(array('key' => 'value'));
-// Find first matching record by attributes or create
- Model::firstOrCreate(array('key' => 'value'));
-// Find first record by attributes or instantiate
- Model::firstOrNew(array('key' => 'value'));
-// Create or update a record matching attibutes, and fill with values
- Model::updateOrCreate(array('search_key' => 'search_value'), array('key' => 'value'));
-// Fill a model with an array of attributes, beware of mass assignment!
+### Eloquent 
+ - Model::create(array('key' => 'value'));
+> Find first matching record by attributes or create
+  - Model::firstOrCreate(array('key' => 'value'));
+> Find first record by attributes or instantiate
+  - Model::firstOrNew(array('key' => 'value'));
+> Create or update a record matching attibutes, and fill with values
+  - Model::updateOrCreate(array('search_key' => 'search_value'), array('key' => 'value'));
+> Fill a model with an array of attributes, beware of mass assignment!
  Model::fill($attributes);
-Model::destroy(1);
-Model::all();
-Model::find(1);
-// Find using dual primary key
- Model::find(array('first', 'last'));
-// Throw an exception if the lookup fails
- Model::findOrFail(1);
-// Find using dual primary key and throw exception if the lookup fails
- Model::findOrFail(array('first', 'last'));
-Model::where('foo', '=', 'bar')->get();
-Model::where('foo', '=', 'bar')->first();
-// Find using relations
- Model::whereHas('relation')->get();
-Model::with('relation')->where('relation.foo', 'bar')->get();
-// dynamic
- Model::whereFoo('bar')->first();
-// Throw an exception if the lookup fails
- Model::where('foo', '=', 'bar')->firstOrFail();
-Model::where('foo', '=', 'bar')->count();
-Model::where('foo', '=', 'bar')->delete();
-//Output raw query
- Model::where('foo', '=', 'bar')->toSql();
-Model::whereRaw('foo = bar and cars = 2', array(20))->get();
-Model::remember(5)->get();
-Model::remember(5, 'cache-key-name')->get();
-Model::cacheTags('my-tag')->remember(5)->get();
-Model::cacheTags(array('my-first-key','my-second-key'))->remember(5)->get();
-Model::on('connection-name')->find(1);
-Model::with('relation')->get();
-Model::all()->take(10);
-Model::all()->skip(10);
-// Default Eloquent sort is ascendant
- Model::orderBy('column')->get();
-Model::orderBy('column','desc')->get();
+ - Model::destroy(1);
+ - Model::all();
+ - Model::find(1);
+> Find using dual primary key
+  - Model::find(array('first', 'last'));
+> Throw an exception if the lookup fails
+ -  Model::findOrFail(1);
+> Find using dual primary key and throw exception if the lookup fails
+  - Model::findOrFail(array('first', 'last'));
+ - Model::where('foo', '=', 'bar')->get();
+ - Model::where('foo', '=', 'bar')->first();
+> Find using relations
+  - Model::whereHas('relation')->get();
+ - Model::with('relation')->where('relation.foo', 'bar')->get();
+> dynamic
+  - Model::whereFoo('bar')->first();
+> Throw an exception if the lookup fails
+  - Model::where('foo', '=', 'bar')->firstOrFail();
+ - Model::where('foo', '=', 'bar')->count();
+ - Model::where('foo', '=', 'bar')->delete();
+>Output raw query
+  - Model::where('foo', '=', 'bar')->toSql();
+ - Model::whereRaw('foo = bar and cars = 2', array(20))->get();
+ - Model::remember(5)->get();
+ - Model::remember(5, 'cache-key-name')->get();
+ - Model::cacheTags('my-tag')->remember(5)->get();
+ - Model::cacheTags(array('my-first-key','my-second-key'))->remember(5)->get();
+ - Model::on('connection-name')->find(1);
+ - Model::with('relation')->get();
+ - Model::all()->take(10);
+ - Model::all()->skip(10);
+> Default Eloquent sort is ascendant
+  - Model::orderBy('column')->get();
+ - Model::orderBy('column','desc')->get();
                 
-Soft Delete
+### Soft Delete
+
+```sh
 Model::withTrashed()->where('cars', 2)->get();
-// Include the soft deleted models in the results
+ **  Include the soft deleted models in the results
  Model::withTrashed()->where('cars', 2)->restore();
 Model::where('cars', 2)->forceDelete();
-// Force the result set to only included soft deletes
+ **  Force the result set to only included soft deletes
  Model::onlyTrashed()->where('cars', 2)->get();
-                
-Events
+```
+
+### Events
 Model::creating(function($model){});
 Model::created(function($model){});
 Model::updating(function($model){});
@@ -1241,3 +1372,179 @@ Storage::directories($directory);
 Storage::allDirectories($directory);
 Storage::makeDirectory($directory);
 Storage::deleteDirectory($directory);
+
+Dillinger is a cloud-enabled, mobile-ready, offline-storage, AngularJS powered HTML5 Markdown editor.
+
+  - Type some Markdown on the left
+  - See HTML in the right
+  - Magic
+
+# New Features!
+
+  - Import a HTML file and watch it magically convert to Markdown
+  - Drag and drop images (requires your Dropbox account be linked)
+
+
+You can also:
+  - Import and save files from GitHub, Dropbox, Google Drive and One Drive
+  - Drag and drop markdown and HTML files into Dillinger
+  - Export documents as Markdown, HTML and PDF
+
+Markdown is a lightweight markup language based on the formatting conventions that people naturally use in email.  As [John Gruber] writes on the [Markdown site][df1]
+
+> The overriding design goal for Markdown's
+> formatting syntax is to make it as readable
+> as possible. The idea is that a
+> Markdown-formatted document should be
+> publishable as-is, as plain text, without
+> looking like it's been marked up with tags
+> or formatting instructions.
+
+This text you see here is *actually* written in Markdown! To get a feel for Markdown's syntax, type some text into the left window and watch the results in the right.
+
+### Tech
+
+Dillinger uses a number of open source projects to work properly:
+
+* [AngularJS] - HTML enhanced for web apps!
+* [Ace Editor] - awesome web-based text editor
+* [markdown-it] - Markdown parser done right. Fast and easy to extend.
+* [Twitter Bootstrap] - great UI boilerplate for modern web apps
+* [node.js] - evented I/O for the backend
+* [Express] - fast node.js network app framework [@tjholowaychuk]
+* [Gulp] - the streaming build system
+* [Breakdance](http://breakdance.io) - HTML to Markdown converter
+* [jQuery] - duh
+
+And of course Dillinger itself is open source with a [public repository][dill]
+ on GitHub.
+
+### Installation
+
+Dillinger requires [Node.js](https://nodejs.org/) v4+ to run.
+
+Install the dependencies and devDependencies and start the server.
+
+```sh
+$ cd dillinger
+$ npm install -d
+$ node app
+```
+
+For production environments...
+
+```sh
+$ npm install --production
+$ NODE_ENV=production node app
+```
+
+### Plugins
+
+Dillinger is currently extended with the following plugins. Instructions on how to use them in your own application are linked below.
+
+| Plugin | README |
+| ------ | ------ |
+| Dropbox | [plugins/dropbox/README.md][PlDb] |
+| Github | [plugins/github/README.md][PlGh] |
+| Google Drive | [plugins/googledrive/README.md][PlGd] |
+| OneDrive | [plugins/onedrive/README.md][PlOd] |
+| Medium | [plugins/medium/README.md][PlMe] |
+| Google Analytics | [plugins/googleanalytics/README.md][PlGa] |
+
+
+### Development
+
+Want to contribute? Great!
+
+Dillinger uses Gulp + Webpack for fast developing.
+Make a change in your file and instantanously see your updates!
+
+Open your favorite Terminal and run these commands.
+
+First Tab:
+```sh
+$ node app
+```
+
+Second Tab:
+```sh
+$ gulp watch
+```
+
+(optional) Third:
+```sh
+$ karma test
+```
+#### Building for source
+For production release:
+```sh
+$ gulp build --prod
+```
+Generating pre-built zip archives for distribution:
+```sh
+$ gulp build dist --prod
+```
+### Docker
+Dillinger is very easy to install and deploy in a Docker container.
+
+By default, the Docker will expose port 8080, so change this within the Dockerfile if necessary. When ready, simply use the Dockerfile to build the image.
+
+```sh
+cd dillinger
+docker build -t joemccann/dillinger:${package.json.version}
+```
+This will create the dillinger image and pull in the necessary dependencies. Be sure to swap out `${package.json.version}` with the actual version of Dillinger.
+
+Once done, run the Docker image and map the port to whatever you wish on your host. In this example, we simply map port 8000 of the host to port 8080 of the Docker (or whatever port was exposed in the Dockerfile):
+
+```sh
+docker run -d -p 8000:8080 --restart="always" <youruser>/dillinger:${package.json.version}
+```
+
+Verify the deployment by navigating to your server address in your preferred browser.
+
+```sh
+127.0.0.1:8000
+```
+
+#### Kubernetes + Google Cloud
+
+See [KUBERNETES.md](https://github.com/joemccann/dillinger/blob/master/KUBERNETES.md)
+
+
+### Todos
+
+ - Write MORE Tests
+ - Add Night Mode
+
+License
+----
+
+MIT
+
+
+**Free Software, Hell Yeah!**
+
+[//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
+
+
+   [dill]: <https://github.com/joemccann/dillinger>
+   [git-repo-url]: <https://github.com/joemccann/dillinger.git>
+   [john gruber]: <http://daringfireball.net>
+   [df1]: <http://daringfireball.net/projects/markdown/>
+   [markdown-it]: <https://github.com/markdown-it/markdown-it>
+   [Ace Editor]: <http://ace.ajax.org>
+   [node.js]: <http://nodejs.org>
+   [Twitter Bootstrap]: <http://twitter.github.com/bootstrap/>
+   [jQuery]: <http://jquery.com>
+   [@tjholowaychuk]: <http://twitter.com/tjholowaychuk>
+   [express]: <http://expressjs.com>
+   [AngularJS]: <http://angularjs.org>
+   [Gulp]: <http://gulpjs.com>
+
+   [PlDb]: <https://github.com/joemccann/dillinger/tree/master/plugins/dropbox/README.md>
+   [PlGh]: <https://github.com/joemccann/dillinger/tree/master/plugins/github/README.md>
+   [PlGd]: <https://github.com/joemccann/dillinger/tree/master/plugins/googledrive/README.md>
+   [PlOd]: <https://github.com/joemccann/dillinger/tree/master/plugins/onedrive/README.md>
+   [PlMe]: <https://github.com/joemccann/dillinger/tree/master/plugins/medium/README.md>
+   [PlGa]: <https://github.com/RahulHP/dillinger/blob/master/plugins/googleanalytics/README.md>
